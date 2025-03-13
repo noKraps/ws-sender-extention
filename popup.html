@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Sender</title>
+    <style>
+        body {
+            width: 400px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+        }
+        #wsList {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #wsList div {
+            padding: 5px;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        #wsList div:hover {
+            background-color: #f0f0f0;
+        }
+        #wsList .selected {
+            background-color: #d0e0ff;
+        }
+        #message {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #sendButton {
+            width: 100%;
+            padding: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #sendButton:hover {
+            background-color: #45a049;
+        }
+        #log {
+            margin-top: 10px;
+            max-height: 100px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h3>WebSocket Sender</h3>
+    <div id="wsList"></div>
+    <input id="message" placeholder="Введите сообщение">
+    <button id="sendButton">Отправить</button>
+    <div id="log"></div>
+    <script src="popup.js"></script>
+</body>
+</html>

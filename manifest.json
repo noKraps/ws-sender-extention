@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "WebSocket Sender",
+    "version": "1.0",
+    "description": "A Chrome extension to send messages to existing WebSocket connections.",
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
